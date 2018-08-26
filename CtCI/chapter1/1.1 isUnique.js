@@ -1,6 +1,8 @@
+const str1 = 'abcderfgktpq';
+const str2 = 'abcderfgktpa';
+const str3 = 'abdfbrghhdgqssscderfgktpa';
 
-// Is unique: implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
-
+//--------------------------------------------------------------------
 //time: O(N)
 //space: O(N)
 const isUnique1 = (str) => {
@@ -14,12 +16,9 @@ const isUnique1 = (str) => {
   return true;
 }
 
-const str1 = 'abcderfgktpq';
-const str2 = 'abcderfgktpa';
-const str3 = 'abdfbrghhdgqssscderfgktpa';
-
 console.log(isUnique1(str1));
 
+//--------------------------------------------------------------------
 //time O(nlogn)
 //space O(1)
 const isUnique2 = (str) => {
@@ -31,6 +30,7 @@ const isUnique2 = (str) => {
 }
 console.log(isUnique2(str1));
 
+//--------------------------------------------------------------------
 //Set
 //time: O(N)
 //space: O(N)
