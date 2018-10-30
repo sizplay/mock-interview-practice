@@ -3,13 +3,42 @@ var LinkedList = function (value) {
   this.next = null;
 };
 
-var findKthToLast = function (k, head) {
-  if (!k) return false;
+//recursion
+var findKthToLast = (k, head) => {
+  //console.log(k, head);
+  if (!head) {
+    return ;
+  }
+  else if (k === 1) {
+    console.log(head.value);
+    findKthToLast(k, head.next);
+  }
+  else {
+    findKthToLast(k - 1, head.next);
+  }
+};
 
-  if ()
+var findKthToLast2 = (k, head) => {
 
+  var node = head;
+  var total = 0;
+  var count = 0;
 
-}
+  while (node) {
+    total++;
+    node = node.next;
+  }
+  var val = total - k;
+  node = head;
+  while (node) {
+    count++;
+    if (count >= val) {
+      console.log(count);
+    }
+    node = node.next;
+  }
+
+};
 
 var a = new LinkedList('1');
 var b = new LinkedList('2');
@@ -26,3 +55,5 @@ d.next = e;
 e.next = f;
 f.next = g;
 
+//findKthToLast(3, a);
+findKthToLast2(3, a);
