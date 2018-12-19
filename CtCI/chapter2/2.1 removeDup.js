@@ -80,3 +80,5 @@ var link = new LinkedList('a').addToHead('b')
 printLinkedList(link.head);
 removeDups2(link.head);
 printLinkedList(link.head);
+
+
